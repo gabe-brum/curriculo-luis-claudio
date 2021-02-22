@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Ubuntu -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <title>Luis Cláudio da Luz</title>
+</head>
+
+<body>
+    <header>
+        <div class="img-banner">
+            <nav class="menu-mobile">
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#quem-sou">Quem Sou</a></li>
+                    <li><a href="#conhecimentos">Conhecimentos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="clear"></div>
+            <!--menu-desktop-->
+            <div class="texto-header">
+                <h2>Luis Cláudio da Luz</h2>
+                <p>custos em geral</p>
+            </div>
+            <!--texto-header-->
+        </div>
+        <!--img-banner-->
+    </header>
+
+    <nav class="menu-desktop">
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#quem-sou">Quem Sou</a></li>
+            <li><a href="#conhecimentos">Conhecimentos</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+    <!--menu-desktop-->
+
+    <!-- quem sou -->
+    <section class="quem-sou" id="quem-sou">
+        <div class="container">
+            <div class="foto">
+                <div class="foto-wraper">
+                </div>
+                <!--foto-wraper-->
+            </div>
+            <!--foto-->
+            <div class="texto-quem-sou">
+                <h2>Luis Cláudio da Luz</h2>
+                <p>Olá, tenho 56 anos e trabalho no ramo calçadista a mais de 30 anos, mas acredito que ainda posso continuar contribuindo e se adequando às novas tecnologias. As atividades que desempenhei ao longo da minha carreira estão listadas abaixo. Estou em busca de novas experiências não apenas para o setor calçadista.</p>
+            </div>
+            <!--texto-quem-sou-->
+            <!--foto-->
+            <div class="clear"></div>
+        </div>
+        <!--container-->
+
+    </section>
+    <!--quem-sou-->
+
+    <section class="conhecimentos" id="conhecimentos">
+        <h2>Conhecimentos</h2>
+        <div class="centralizador">
+            <div class="scrollConhecimento">
+                <div class="scroll-wraper">
+                    <div class="conhecimento-single">
+                        <div class="conhecimento-wraper">
+                            <div class="wraper-titulo-conhecimento">
+                                <h2>Custos</h2>
+                            </div>
+                            <!--wraper-titulo-autor-->
+                            <div class="icone">
+                                <img src="imgs/custo.svg" alt="">
+                            </div><!--icone-->
+                        </div>
+                        <!--conhecimento-wraper-->
+
+                        <div class="texto-conhecimento">
+                            <p>Levantamento de dados administrativos para orçamento, consumo de materiais e controles, precificação de mão de obra externa e interna, cálculo de custo de produtos e controles em geral.</p>
+                        </div>
+                        <!--texto-conhecimento-->
+                    </div>
+                    <!--conhecimento-single-->
+
+                    <div class="conhecimento-single">
+                        <div class="conhecimento-wraper">
+                            <div class="icone">
+                                <img src="imgs/planejador.svg" alt="">
+                            </div>
+                            <div class="wraper-titulo-conhecimento">
+                                <h2>P.C.P</h2>
+                            </div>
+                            <!--wraper-titulo-autor-->
+                        </div>
+                        <!--conhecimento-wraper-->
+
+                        <div class="texto-conhecimento">
+                            <p>Cadastro de pedidos, levantamento de materiais, programação dos pedidos e controles.</p>
+                        </div>
+                        <!--texto-conhecimento-->
+                    </div>
+                    <!--conhecimento-single-->
+
+                    <div class="conhecimento-single">
+                        <div class="conhecimento-wraper">
+                            <div class="icone">
+                                <img src="imgs/sacolas-de-compras.svg" alt="">
+                            </div>
+                            <div class="wraper-titulo-conhecimento">
+                                <h2>Compras</h2>
+                            </div>
+                            <!--wraper-titulo-autor-->
+                        </div>
+                        <!--conhecimento-wraper-->
+
+                        <div class="texto-conhecimento">
+                            <p>Recebimento do relatório de materiais, orçamentos em geral dos materiais, compras e controles em geral.</p>
+                        </div>
+                        <!--texto-conhecimento-->
+                    </div>
+                    <!--conhecimento-single-->
+                </div>
+                <!--scroll-wraper-->
+            </div>
+            <!--scrollConhecimento-->
+
+
+            <div class="slider-bullets centralizador">
+                <!-- span's gerados pelo JS -->
+            </div>
+            <!--slider-bullets-->
+        </div>
+    </section>
+    <!--conhecimentos-->
+    <div class="clear"></div>
+
+    <section class="contato" id="contato">
+        <h2>Contato</h2>
+        <div class="container">
+            <div class="form">
+                <form action="email.php" method="post">
+                    <div class="input-wraper w100">
+                        <input type="text" name="nome" id="nome" placeholder="Nome" required>
+                    </div>
+                    <!--input-wraper-->
+
+                    <div class="input-wraper w50">
+                        <input type="email" name="email" id="email" placeholder="E-mail" required>
+                    </div>
+                    <!--input-wraper-->
+
+                    <div class="input-wraper w50">
+                        <input type="text" name="telefone" id="telefone" placeholder="Telefone" required>
+                    </div>
+                    <!--input-wraper-->
+
+                    <div class="input-wraper w100">
+                        <textarea name="mensagem" id="mensagem" placeholder="Mensagem"></textarea>
+                    </div>
+                    <!--input-wraper-->
+
+                    <div class="input-wraper w100">
+                        <button class="btn-form" id="btnEnviarEmail" name="btnEnviarEmail">enviar</button>
+                    </div>
+                    <!--input-wraper-->
+
+                    <input type="hidden" value="luisclaudiodaluz64@gmail.com" id="destino" name="destino">
+                </form>
+            </div>
+            <!--form-->
+
+            <div class="clear"></div>
+
+        </div>
+        <!--container-->
+    </section>
+    <!--contato-->
+
+    <footer>
+        <h2>Meus dados</h2>
+        <div class="dado-wraper">
+            <div class="dado">
+                <div class="icone-dado">
+                    <img src="imgs/phone-call.svg" alt="telefone">
+                </div>
+                <div class="texto-dado">
+                    <span>(51) 98126-7624</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="dado-wraper">
+            <div class="dado">
+                <div class="icone-dado">
+                    <img src="imgs/mail.svg" alt="email">
+                </div>
+                <div class="texto-dado">
+                    <span>luisclaudiodaluz64@gmail.com</span>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="copy">
+            <span>&copy; Todos os direitos reservados.</span>
+        </div>
+    </footer>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- JS próprio -->
+    <script src="js/scroll.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/menu-responsivo.js"></script>
+</body>
+
+</html>

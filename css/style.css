@@ -1,0 +1,450 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: #CCDAD1;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.clear {
+    clear: both;
+}
+
+/* HEADER */
+header .img-banner {
+    width: 100%;
+    height: 90vh;
+    max-height: 300px;
+    background-image: url('../imgs/background.jpg');
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+}
+
+.texto-header {
+    text-align: center;
+    padding-top: 150px;
+    color: #232323;
+}
+
+.texto-header h2 {
+    font-size: 40px;
+    font-style: italic;
+}
+
+.texto-header p {
+    font-size: 24px;
+    font-weight: lighter;
+}
+
+/* TÉRMINO HEADER */
+
+/* NAVS DESKTOP E MOBILE */
+
+nav.menu-desktop {
+    width: 100%;
+    height: 60px;
+    background-color: #38302E;
+    text-align: center;
+
+}
+
+nav.menu-desktop ul {
+    list-style-type: none;
+}
+
+nav.menu-desktop li {
+    display: inline;
+    padding: 0 30px;
+    line-height: 60px;
+}
+
+nav.menu-desktop li a {
+    text-decoration: none;
+    color: #CCDAD1;
+    font-size: 18px;
+}
+
+nav.menu-desktop li a:hover {
+    color: #929292;
+    transition: 0.5s;
+}
+
+nav.menu-mobile {
+    cursor: pointer;
+    display: none;
+    width: 40px;
+    height: 40px;
+    background-image: url('../imgs/icone-menu.png');
+    background-size: 100% 100%;
+    margin: 20px 0 0 5px;
+    float: left;
+}
+
+nav.menu-mobile ul {
+    display: none;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 70px;
+    color: white;
+    list-style-type: none;
+    text-align: center;
+}
+
+nav.menu-mobile ul li {
+    padding: 8px 0;
+    transition: 0.4s;
+    border-bottom: 1px solid #38302E;
+}
+
+nav.menu-mobile ul li:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+nav.menu-mobile ul li a {
+    text-decoration: none;
+    color: #38302E;
+}
+
+/* TÉRMINO NAVS DESKTOP E MOBILE */
+
+/* QUEM-SOU */
+
+section.quem-sou .container {
+    padding: 120px 0;
+}
+
+.foto {
+    width: 50%;
+    float: left;
+}
+
+.foto-wraper {
+    max-width: 350px;
+    height: 400px;
+    background-color: #232323;
+    /* background-image: url('');
+    background-position: center;
+    background-size: 100% 100%; */
+}
+
+.texto-quem-sou {
+    width: 50%;
+    float: left;
+}
+
+.texto-quem-sou h2 {
+    font-size: 28px;
+}
+
+.texto-quem-sou p {
+    margin-top: 20px;
+    line-height: 35px;
+}
+
+/* TÉRMINO QUEM-SOU */
+
+/* CONHECIMENTOS */
+
+section.conhecimentos {
+    background-color: #788585;
+    color: white;
+    float: left;
+    width: 100%;
+    padding: 150px 0 180px 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+section.conhecimentos>h2 {
+    margin-bottom: 100px;
+    font-size: 32px;
+}
+
+.centralizador {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.scrollConhecimento {
+    max-width: 700px;
+    overflow: hidden;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-wraper {
+    width: 100%;
+}
+
+.conhecimento-single {
+    float: left;
+    max-width: 100%;
+    padding: 0 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.conhecimento-wraper {
+    float: left;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wraper-titulo-conhecimento {
+    float: left;
+    line-height: 60px;
+    font-size: 24px;
+}
+
+.conhecimento-wraper .icone img {
+    float: right;
+    width: 60px;
+    height: 60px;
+}
+
+.texto-conhecimento p {
+    float: left;
+    width: 100%;
+    margin-top: 15px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.slider-bullets {
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.slider-bullets span {
+    width: 10px;
+    height: 10px;
+    float: left;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+/* TÉRMINO CONHECIMENTOS */
+
+/* CONTATO */
+
+section.contato {
+    background-color: #9CAEA9;
+    color: white;
+    padding: 80px 0;
+}
+
+section.contato h2 {
+    text-align: center;
+    font-size: 32px;
+}
+
+.form {
+    text-align: center;
+}
+
+section.contato form {
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+section.contato .input-wraper {
+    float: left;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+section.contato input {
+    width: 100%;
+    border: 1px solid #788585;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 15px;
+    outline: 0;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.w50 {
+    width: 50%;
+}
+
+section.contato textarea {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #788585;
+    resize: none;
+    padding: 15px;
+    outline: 0;
+}
+
+.btn-form {
+    width: 100px;
+    height: 30px;
+    background-color: #788585;
+    color: white;
+    text-transform: uppercase;
+    border: 0;
+    border-bottom: 2px solid #38302E;
+    transition: 0.5s;
+}
+
+.btn-form:hover {
+    background-color: #38302E;
+
+}
+
+/* TÉRMINO CONTATO */
+
+/* FOOTER */
+
+footer {
+    background-color: #38302E;
+    padding: 50px 0;
+    color: white;
+}
+
+footer h2 {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.dado-wraper {
+    width: 100%;
+    text-align: center;
+}
+
+.dado {
+    float: left;
+    width: 50%;
+    align-items: center;
+}
+
+/* .icone-dado{
+    float: left;
+} */
+
+.icone-dado img {
+    width: 32px;
+    height: 32px;
+}
+
+.texto-dado>span {
+    line-height: 32px;
+}
+
+.copy {
+    text-align: center;
+    font-weight: 300;
+    font-style: italic;
+    padding-top: 20px;
+}
+
+
+/* TÉRMINO FOOTER */
+
+@media screen and (max-width: 768px) {
+
+    nav.menu-desktop {
+        display: none;
+    }
+
+    nav.menu-mobile {
+        display: block;
+    }
+
+    .texto-header {
+        text-align: center;
+        padding-top: 120px;
+        color: black;
+    }
+
+    section.quem-sou {
+        margin: 0 4%;
+    }
+
+    section.quem-sou .container {
+        padding: 80px 0;
+    }
+
+    .quem-sou .container {
+        height: auto;
+        position: static;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .foto {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .foto-wraper {
+        margin-left: auto;
+        margin-right: auto;
+        width: 400px;
+        background-color: #232323;
+    }
+
+    .texto-quem-sou {
+        width: 100%;
+        float: none;
+    }
+
+    .texto-quem-sou h2 {
+        padding-top: 30px;
+    }
+
+    .w50 {
+        width: 100%;
+    }
+
+    /* .conhecimento-wraper{
+        width: 100%;
+        margin-left: 100px;
+        margin-right: 100px;
+    } */
+
+    .dado-wraper {
+        margin-bottom: 30px;
+    }
+
+    .dado {
+        float: none;
+        width: 100%;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 667px) {
+    .conhecimento-wraper {
+        width: 100%;
+    }
+}
