@@ -121,6 +121,33 @@ nav.menu-mobile ul li a {
 
 /* TÉRMINO NAVS DESKTOP E MOBILE */
 
+/* SCROLLTOTOP() */
+
+.scrollTop{
+    position: fixed;
+    bottom: 800px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    background-image: url('../imgs/up.png');
+    background-color: white;
+    border-radius: 50%;
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.scrollTop.active{
+    bottom: 40px;
+    visibility: visible;
+    opacity: 1;
+}
+
 /* QUEM-SOU */
 
 section.quem-sou .container {
@@ -136,9 +163,9 @@ section.quem-sou .container {
     max-width: 350px;
     height: 400px;
     background-color: #232323;
-    /* background-image: url('');
+    background-image: url('../imgs/user.jpg');
     background-position: center;
-    background-size: 100% 100%; */
+    background-size: 100% 100%;
 }
 
 .texto-quem-sou {
@@ -386,12 +413,16 @@ footer h2 {
         color: black;
     }
 
+    .scrollTop{
+        display: none;
+    }
+
     section.quem-sou {
         margin: 0 4%;
     }
 
     section.quem-sou .container {
-        padding: 80px 0;
+        padding: 100px 0;
     }
 
     .quem-sou .container {
@@ -422,6 +453,10 @@ footer h2 {
         padding-top: 30px;
     }
 
+    section.contato{
+        padding: 40px 0;
+    }
+
     .w50 {
         width: 100%;
     }
@@ -444,7 +479,15 @@ footer h2 {
 }
 
 @media screen and (max-width: 667px) {
-    .conhecimento-wraper {
-        width: 100%;
+    section.quem-sou .container {
+        padding: 75px 0;
+    }
+
+    section.conhecimentos {
+        padding: 120px 0 150px 0;
+    }
+
+    section.contato{
+        padding: 30px 0;
     }
 }

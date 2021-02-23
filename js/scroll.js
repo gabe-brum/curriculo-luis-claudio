@@ -1,4 +1,3 @@
-// slider conhecimentos
 $(function () {
     // scroll dinâmico 
     $(function () {

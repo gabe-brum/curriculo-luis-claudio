@@ -1,74 +1,17 @@
-<?php   
+<?php
+//Variáveis
 
-// Inclui o arquivo class.phpmailer.php localizado na mesma pasta do arquivo php 
-include "PHPMailer-master/PHPMailerAutoload.php"; 
-
-// Inicia a classe PHPMailer 
-$mail = new PHPMailer(); 
-
-// Método de envio 
-$mail->IsSMTP(); 
-
-// Enviar por SMTP 
-$mail->Host = "luisclaudiodaluz.com.br"; 
-
-// Você pode alterar este parametro para o endereço de SMTP do seu provedor 
-$mail->Port = 25; 
-
-
-// Usar autenticação SMTP (obrigatório) 
-$mail->SMTPAuth = true; 
-
-// Usuário do servidor SMTP (endereço de email) 
-// obs: Use a mesma senha da sua conta de email 
-$mail->Username = 'luisclaudiodaluz64@gmail.com'; 
-$mail->Password = 'luis-claudio-da-luz64'; 
-
-// Configurações de compatibilidade para autenticação em TLS 
-$mail->SMTPOptions = array( 'ssl' => array( 'verify_peer' => false, 'verify_peer_name' => false, 'allow_self_signed' => true ) ); 
-
-// Dados do html form
 $nome = $_POST['nome'];
 $email = $_POST['email'];
 $telefone = $_POST['telefone'];
 $mensagem = $_POST['mensagem'];
 
-// Você pode habilitar esta opção caso tenha problemas. Assim pode identificar mensagens de erro. 
-// $mail->SMTPDebug = 2; 
-
-// Define o remetente 
-// Seu e-mail 
-$mail->From = "luisclaudiodaluz64@gmail.com"; 
-
-// Seu nome 
-$mail->FromName = "Luis Cláudio"; 
-
-// Define o(s) destinatário(s) 
-// $mail->AddAddress('maria@gmail.com', 'Maria'); 
-
-// Opcional: mais de um destinatário
-// $mail->AddAddress('fernando@email.com'); 
-
-// Opcionais: CC e BCC
-// $mail->AddCC('joana@provedor.com', 'Joana'); 
-// $mail->AddBCC('roberto@gmail.com', 'Roberto'); 
-
-// Definir se o e-mail é em formato HTML ou texto plano 
-// Formato HTML . Use "false" para enviar em formato texto simples ou "true" para HTML.
-$mail->IsHTML(true); 
-
-// Charset (opcional) 
-$mail->CharSet = 'UTF-8'; 
-
-// Assunto da mensagem 
-$mail->Subject = "Contato via site"; 
-
-// Corpo do email 
-$mail->Body = "
+// Corpo E-mail
+$arquivo = "
 <style type='text/css'>
 body {
 margin:0px;
-font-family:Verdane;
+font-family:Verdana;
 font-size:12px;
 color: #000;
 }
@@ -84,23 +27,28 @@ p:hover {
     <p>Nome: $nome</p>
     <p>E-mail: $email</p>
     <p>Telefone: $telefone</p>
-    <p>Assunto: $assunto</p>
     <p>Mensagem: $mensagem</p>
-  </html>"; 
+  </html>
+";
 
-// Opcional: Anexos 
-// $mail->AddAttachment("/home/usuario/public_html/documento.pdf", "documento.pdf"); 
+//enviar
 
-// Envia o e-mail 
-$enviado = $mail->Send(); 
+// emails para quem será enviado o formulário
+$emailenviar = "luisclaudiodaluz64@gmail.com";
+$destino = $emailenviar;
+$assunto = "Contato pelo Site";
 
-// Exibe uma mensagem de resultado 
-if ($enviado) 
-{ 
-    echo "Seu email foi enviado com sucesso!"; 
-} else { 
-    echo "Houve um erro enviando o email: ".$mail->ErrorInfo; 
-} 
+// É necessário indicar que o formato do e-mail é html
+$headers  = 'MIME-Version: 1.0' . "\r\n";
+$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+$headers .= 'From: Contato pelo Site <$email>';
+//$headers .= "Bcc: $EmailPadrao\r\n";
 
-
-?>
+$enviaremail = mail($destino, $assunto, $arquivo, $headers);
+if ($enviaremail) {
+  $mgm = "E-MAIL ENVIADO COM SUCESSO! <br> O link será enviado para o e-mail fornecido no formulário";
+  echo " <meta http-equiv='refresh' content='1;URL=index.html'>";
+} else {
+  $mgm = "ERRO AO ENVIAR E-MAIL!";
+  echo "";
+}

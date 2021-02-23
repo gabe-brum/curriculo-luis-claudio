@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <!-- favicon -->
-    <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="imgs/custo.svg" type="image/x-icon">
     <!-- Font Ubuntu -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,400&display=swap"
@@ -149,7 +149,7 @@
         <h2>Contato</h2>
         <div class="container">
             <div class="form">
-                <form action="envio-email.php" method="post">
+                <form action="email.php" method="post">
                     <div class="input-wraper w100">
                         <input type="text" name="nome" id="nome" placeholder="Nome" required>
                     </div>
@@ -175,6 +175,7 @@
                     </div>
                     <!--input-wraper-->
 
+                    <input type="hidden" value="luisclaudiodaluz64@gmail.com" id="destino" name="destino">
                 </form>
             </div>
             <!--form-->
@@ -235,7 +236,6 @@
     <script src="js/scroll.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/menu-responsivo.js"></script>
-    <script src="js/form.js"></script>
 </body>
 
 </html>
